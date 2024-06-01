@@ -1,0 +1,15 @@
+<?xml version="1.0" encodeing="UTF-8"?>
+<productList title="jetbrain">
+    <product title="Webstorm Editor">
+        <name>Webstorm</name>
+        <description>html/css/js support</description>
+        <price>$100</price>
+    </product>
+
+    <product title="PHPstorm Editor">
+        <name>PHPstorm</name>
+        <description>PHP support</description>
+        <price>$150</price>
+    </product>
+
+</productList>

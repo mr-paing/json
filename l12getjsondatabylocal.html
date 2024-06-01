@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Openweathermap Application Programming Interface</title>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+
+          // AJAX 
+        //   initialize the HTTP Request 
+        var xmlhttp = new XMLHttpRequest();
+
+                    // protocol , url ,false
+        xmlhttp.open("GET","./l12sampledata.json",false); //false mean no synchronize
+        xmlhttp.send();
+
+        if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+            // const result = xmlhttp;
+            // console.log(result);
+
+            var result = xmlhttp.responseText;
+            // console.log(result);
+        }
+
+        console.log(result);
+        console.log(typeof result);
+
+        var result = JSON.parse(result);
+
+        console.log(result);
+        console.log(typeof result);
+
+        console.log(result.weather[0].main);
+        console.log(result.name);
+
+        console.log(result["wind"]["speed"]);
+        console.log(result.wind.speed);
+
+        console.log(result.main.temp);
+
+
+            
+        </script>
+    </body>
+</html>
+
+<!-- AJAX (Asynchronous Javascript and XML) -->
+
+<!-- Why AJAX 
+No refresh 
+Can request external data or from a server
+Can receive external data or from a server
+Can send data to a server -->
+
+<!-- 
+    Getting to know the code 4 and 200
+    4 mean the request is done 
+    200 mean it's a successful return  -->

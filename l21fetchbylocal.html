@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fetch by Local with regular function</title>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+
+        //   // AJAX 
+        // //   initialize the HTTP Request 
+        // var xmlhttp = new XMLHttpRequest();
+
+        //             // protocol , url ,false
+        // xmlhttp.open("GET","./l12sampledata.json",false); //false mean no synchronize
+        // xmlhttp.send();
+
+        // if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+        //     // const result = xmlhttp;
+        //     // console.log(result);
+
+        //     var result = xmlhttp.responseText;
+        //     // console.log(result);
+        // }
+
+        // console.log(result);
+        // console.log(typeof result);
+
+        // var result = JSON.parse(result);
+
+        // console.log(result);
+        // console.log(typeof result);
+
+        // console.log(result.weather[0].main);
+        // console.log(result.name);
+
+        // console.log(result["wind"]["speed"]);
+        // console.log(result.wind.speed);
+
+        // console.log(result.main.temp);
+
+
+        // =>fetch()
+        //  Syntax 
+
+        // fetch(url)
+        // .then(response=>response.json())
+        // .then(data)
+        // .catch((err)=>console.log(err))
+
+        var url = `./l12sampledata.json`;
+        fetch(url).then(function(response){
+            // console.log(response); //Response {type: 'basic', url: 'http://127.0.0.1:5500/l12sampledata.json', redirected: false, status: 200, ok: true, …}
+            // console.log(response.headers.get('Content-type')); //application/json; charset=UTF-8
+            return response.json();
+        }).then(function(data){
+            // console.log(data);
+            console.log(data.main);
+            console.log(data.name);
+            console.log(data.weather[0].main);
+            console.log(data.wind.speed);
+
+        }).catch(function(err){
+            console.log(err);
+        });
+
+
+
+            
+        </script>
+    </body>
+</html>

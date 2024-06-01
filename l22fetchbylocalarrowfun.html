@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fetch by Local Arrow Function</title>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            var url = `./l12sampledata.json`;
+            fetch(url).then(response=>{
+                return response.json();
+            }).then(data=>{
+                console.log(data);
+                console.log(data.name);
+                console.log(data.weather[0]["main"]);
+            }).catch(err=>{
+                console.log(err);
+            });
+
+            // Method 2
+
+            fetch(url).then(response=>response.json()).then(data=>{
+                console.log(data.weather[0].main);
+                console.log(data.name);
+            }).catch(err=>err);
+        </script>
+    </body>
+</html>

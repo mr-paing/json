@@ -1,0 +1,60 @@
+{
+    "articales" : [
+        {
+            "title" : "This is artical 1",
+            "cotent" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            "rating" : 5
+        },
+        {
+            "title" : "This is artical 3",
+            "cotent" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            "rating" : 5
+        },
+        {
+            "title" : "This is artical 5",
+            "cotent" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            "rating" : 5
+        },
+        {
+            "title" : "This is artical 7",
+            "cotent" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            "rating" : 5
+        }
+
+    ],
+    "sports" : [
+        {
+            "title" : "This is sport 2",
+            "cotent" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            "rating" : 5
+        },
+        {
+            "title" : "This is sport 4",
+            "cotent" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            "rating" : 5
+        },
+        {
+            "title" : "This is sport 6",
+            "cotent" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            "rating" : 5
+        },
+        {
+            "title" : "This is sport 8",
+            "cotent" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            "rating" : 5
+        }
+
+    ],
+    "stories" : [
+        {
+            "title" : "This is story 9",
+            "cotent" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            "rating" : 5
+        },
+        {
+            "title" : "This is story 10",
+            "cotent" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            "rating" : 5
+        }
+    ]
+}

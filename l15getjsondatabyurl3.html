@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Randomuser API From URL 3</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var xmlhttp =  new XMLHttpRequest();
+            var url = `https://randomuser.me/api/`;
+
+            // xmlhttp.open("GET",url,true); // true means yes synchronize
+            // xmlhttp.send();
+
+            // No Result 
+            // xmlhttp.open("GET",url,false);
+            // xmlhttp.send();
+
+            xmlhttp.onreadystatechange = function(){
+                console.log("state changed" , xmlhttp.readyState,xmlhttp.status);
+
+                if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+                    var result = xmlhttp.responseText;
+
+                    console.log(result);
+                    console.log(typeof result);
+
+                    result = JSON.parse(result);
+                    console.log(result);
+                    console.log(result);
+
+                    console.log(result.results[0].name.first);
+
+                }
+                
+            }
+            
+            xmlhttp.open("GET",url,true); // true means yes synchronize
+            xmlhttp.send();
+
+            // Yes result 
+            // xmlhttp.open("GET",url,false); // false means no synchronize
+            // xmlhttp.send();
+
+        </script>
+    </body>
+</html>

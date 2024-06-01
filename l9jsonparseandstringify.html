@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON.parse and JSON.stringify</title>
+    </head>
+    <body>
+        <script type="text/Javascript">
+            const students = '{"firstname":"Kyaw","lastname":"Zayar","age":15}'; //it must be string, cuz it's string
+
+            console.log(students);
+            console.log(typeof(students));
+
+            const studentobj = JSON.parse(students);
+
+            console.log(studentobj);
+            console.log(typeof(studentobj));
+
+            console.log(studentobj.firstname,studentobj.lastname);
+
+
+            const staff = {
+                "firstname" : "Hsu",
+                "lastname" : "mon",
+                "age" : 20
+            };
+
+            console.log(staff);
+            console.log(typeof(staff));
+
+            staffstr = JSON.stringify(staff);
+
+            console.log(staffstr);
+            console.log(typeof(staffstr));
+            console.log(staffstr.firstname,staffstr.lastname); //undefined undefined
+
+
+        </script>
+    </body>
+</html>

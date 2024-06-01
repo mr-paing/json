@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Local Storage with JSON</title>
+        
+        <style type="text/css">
+            body{
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container{
+                width: 300px;
+                background-color: #f4f4f4;
+                padding: 10px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        
+        <div class="container">
+            <h4>Choose Your Fav Color</h4>
+            <div class="colorbox">
+                <ul class="list-group">
+
+                </ul>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            const getul = document.querySelector('.list-group');
+            var datas = `{"colors":{"Red Color":true,"Blue Color":false,"Green Color":true,"Violet Color":true,"Tomato Color":false,"Pink Color":true}}`;
+
+            var dataobjs = JSON.parse(datas);
+            // console.log(dataobjs);
+            // console.log(dataobjs.colors);
+
+            var x = 0;
+            for(var key in dataobjs.colors){
+                // console.log(key);
+                // console.log(dataobjs.colors[key]);
+
+                x++;
+                // var status = dataobjs.colors[key] ? "checked" : "";
+                var status = !dataobjs.colors[key] ? "" : "checked";
+                var lis = `<li><input type="checkbox" id="${x}" value="${key}" ${status} /> <label for="${x}"> ${key} </label> </li>`;
+                getul.innerHTML += lis;
+            }
+
+            clickeven();
+
+            function clickeven(){
+                var getcheckeds = document.querySelectorAll('.list-group input[type="checkbox"]');
+                // console.log(getcheckeds);
+
+                for(var idx in getcheckeds){
+                    // console.log(getcheckeds[idx]);
+
+                    //Note:: if you use onchange instead of addEventListener, no need to use () in function_name
+                    getcheckeds[idx].onchange = updateda;
+                }
+            }
+
+            function updateda(e){
+                // console.log('hey');
+                // console.log(e.target.value);
+                // console.log(this.value);
+
+
+                var getinputval = this.value;
+                var getinputstatus = this.checked;
+                // console.log(getinputstatus);
+                // console.log(getinputval,getinputstatus);
+
+                // dataobjs.colors.getinputval = getinputstatus; //doesn't work cuz it's was variable
+                dataobjs.colors[getinputval] = getinputstatus;
+                console.log(dataobjs);
+            }
+
+        </script>
+    </body>
+</html>

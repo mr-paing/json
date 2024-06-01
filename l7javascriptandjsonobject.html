@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Object Literal & JSON Object</title>
+    </head>
+    <body>
+        <script type="text/Javascript">
+            
+            const employees = {
+                firstname : "Maung",
+                lastname : "Zaw",
+                "age" : 20,
+                "tax" : true,
+                getname : function(){
+                    return "I am " + this.firstname + " " + this.lastname;
+                }
+            };
+            console.log(employees);
+            console.log(employees.firstname,employees.lastname);
+            console.log(employees.getname());
+
+
+            const students = {
+                "firstname" : "Kyaw",
+                "lastname" : "Zay ya",
+                "age" : 15,
+                "tax" : false,
+                "passport" : null,
+                "holiday":["Saturday","Sunday"],
+                "remark" : "Lorem Ipsum is simply \"dummy tex\"t of the printing and typesetting industry.",
+                "qualify" : [
+                    {"subject":"myanmar","mark":80},
+                    {"subject":"english","mark":90},
+                    {"subject":"english","mark":100}
+                ]
+            }
+
+                console.log(students);
+                console.log(students.firstname,students.lastname);
+                console.log(students.age);
+                console.log(students.tax);
+                console.log(students.passport);
+                console.log(students.holiday);
+                console.log(students.holiday[0]);
+                console.log(students.holiday[1]);
+                console.log(students.remark);
+                console.log(students.qualify);
+                console.log(students.qualify[0].subject,students.qualify[0].mark);
+                console.log(students.qualify[1].subject,students.qualify[1].mark);
+                console.log(students.qualify[2].subject,students.qualify[2].mark);
+
+
+
+        </script>
+    </body>
+</html>

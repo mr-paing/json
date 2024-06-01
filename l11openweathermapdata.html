@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Openweathermap Application Programming Interface</title>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+          const info = {"coord":{"lon":16.9546947,"lat":96.3106439},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":281.14,"feels_like":281.14,"temp_min":279.84,"temp_max":282.16,"pressure":1019,"humidity":74,"sea_level":1019,"grnd_level":931},"visibility":10000,"wind":{"speed":0.85,"deg":350,"gust":1.2},"clouds":{"all":10},"dt":1700752576,"sys":{"type":2,"id":2044440,"country":"IT","sunrise":1700720510,"sunset":1700754190},"timezone":3600,"id":3163858,"name":"Zocca","cod":200};
+
+          console.log(info);
+          console.log(info.weather[0]["main"]);
+          console.log(info.wind.speed); //Dot  notation
+          console.log(info.wind["speed"]); //Bracket Notation
+          console.log(info["wind"]["speed"]); //Bracket Notation
+            
+
+
+
+
+            
+        </script>
+    </body>
+</html>
+
+
+<!-- 28WT -->
